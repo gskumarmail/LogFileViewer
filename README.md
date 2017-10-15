@@ -17,7 +17,7 @@ Log File Viewer
 
 ## Running the tests
 
-Run below the php files for unit test 
+Run below commands in terminal
 ```
 vendor/bin/phpunit UnitTests/logViewerApiTest.php
 
@@ -26,12 +26,13 @@ vendor/bin/phpunit UnitTests/logFileViewerTest.php
 
 ## Built With
 
-* [HTML5]- Hyper Text Markup language
-* [CSS3] - Stylesheet 
-* [JavaScript] - Client Side Scripting
-* [ES6] - 2015 JavaScript version 
+* [HTML5](https://www.w3.org/TR/html5/) - Hyper Text Markup language
+* [CSS3](https://www.w3.org/TR/2001/WD-css3-roadmap-20010523/) - Stylesheet 
+* [JavaScript](https://www.w3.org/standards/webdesign/script) - Client Side Scripting
+* [ES6](http://exploringjs.com/es6/) - 2015 JavaScript version 
 * [jQuery](https://jquery.com/) - The Write Less, Do More, JavaScript Library
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+* [Babel](https://babeljs.io/) - Babel is a JavaScript compiler
 * [Bootstrap](http://getbootstrap.com/) - Build responsive, mobile-first projects on the web with the world's most popular front-end component library 
 * [PHP](php.net/) - PHP is a server scripting language
 

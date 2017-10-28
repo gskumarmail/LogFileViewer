@@ -1,45 +1,29 @@
 <?php
+require 'php/log_viewer_api.php';
 class logViewerApiTest extends PHPUnit_Framework_TestCase
 {
-    protected $backupGlobalsBlacklist = ['globalVariable'];
-    protected function setUp()
-    {
-        $this->pageLines = 10;
-        $this->firstPage = 1;
-        $this->nextPage = ($this->firstPage + 1);
-        $this->prevPage = ($this->pageLines - 1);
-        $this->lastPage = $this->pageLines;
-        $this->url = 'http://localhost/PropertyGuru/LogFileViewer/php/log_viewer_api.php';
-    
-    }
-
-    public function test_not_valid_request()
-    {
-        $content = file_get_contents($this->url);
-        $this->assertContains('Request is not valid',$content);
-    }
-    
-    public function test_read_first_page()
-    {
-        $content = file_get_contents($this->url.'?file_path=log.txt&page='.$this->firstPage);
-        $this->assertContains('Sun Mar 7 16:02:00 2004',$content);
-    }
-
-    public function test_read_prev_page()
-    {   
-        $content = file_get_contents($this->url.'?file_path=log.txt&page='.$this->prevPage);
-        $this->assertContains('Mon Mar 8 05:24:29 2004',$content);
-    }
-
-    public function test_read_next_page()
-    {
-        $content = file_get_contents($this->url.'?file_path=log.txt&page='.$this->nextPage);
-        $this->assertContains('Sun Mar 7 17:31:39 2004',$content);
-    }
-
-    public function test_read_last_page()
-    {
-        $content = file_get_contents($this->url.'?file_path=log.txt&page='.$this->lastPage);
-        $this->assertContains('Mon Mar 8 05:31:47 2004',$content);
-    }
+  public function test_construct()
+  {
+    $api = new LogViewerApi();
+    $this->assertEquals(1, $api->page);
+    $this->assertEquals(10, $api->row_count);
+    $this->assertContains('logfiles/log.txt', $api->file_path);
+  }
+  public function test_get_page_list()
+  {
+    $api   = new LogViewerApi();
+    $array = $api->getPageList();
+    $this->assertTrue(is_array($array));
+    $this->assertEquals(10, count($array['items']));
+  }
+  public function test_get_load_pages()
+  {
+    $api        = new LogViewerApi();
+    $pagination = $api->getLoadPages();
+    $this->assertTrue(is_array($pagination));
+    $this->assertEquals(1, $pagination['paginate']['page']);
+    $this->assertEquals(7, $pagination['paginate']['pages']);
+    $this->assertEquals(10, $pagination['paginate']['row_count']);
+    $this->assertContains('logfiles/log.txt', $pagination['paginate']['file_path']);
+  }
 }

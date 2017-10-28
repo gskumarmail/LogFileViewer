@@ -12,14 +12,14 @@ const TEXT_COLOR = '#26a1ae';
 class PageOptions extends React.Component {
     render() {
         return (
-            React.createElement("div", {className: "col-md-6", style: {textAlign: 'right',color: TEXT_COLOR}},
-            LABEL_TEXT_1, 
-                React.createElement("select", {onChange: this.props.onChange, name: "row_count"},
-                    React.createElement("option", {value: "10"} , 10), 
-                    React.createElement("option", {value: "20"}, 20),
-                    React.createElement("option", {value: "30"}, 30),
-                    React.createElement("option", {value: "40"}, 40),
-                    React.createElement("option", {value: "50"}, 50)
+            React.createElement("div", { className: "col-md-6", style: { textAlign: 'right', color: TEXT_COLOR } },
+                LABEL_TEXT_1,
+                React.createElement("select", { onChange: this.props.onChange, name: "row_count" },
+                    React.createElement("option", { value: "10" }, 10),
+                    React.createElement("option", { value: "20" }, 20),
+                    React.createElement("option", { value: "30" }, 30),
+                    React.createElement("option", { value: "40" }, 40),
+                    React.createElement("option", { value: "50" }, 50)
                 ), LABEL_TEXT_2
             )
         );

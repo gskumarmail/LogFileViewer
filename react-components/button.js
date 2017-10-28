@@ -10,14 +10,12 @@ const BUTTON_CLASS_NAME = 'btn btn-default';
 class Button extends React.Component {
     render() {
         return (
-            React.createElement("a", 
-            						{
-            							className: BUTTON_CLASS_NAME,
-            							href: "#",
-            							onClick: this.props.onClick,
-            							disabled: this.props.disabled
-            						}, this.props.text
-            					)
+            React.createElement("a", {
+                className: BUTTON_CLASS_NAME,
+                href: "#",
+                onClick: this.props.onClick,
+                disabled: this.props.disabled
+            }, this.props.text)
         );
     }
 }

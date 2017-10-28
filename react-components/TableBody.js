@@ -10,15 +10,14 @@ class TableBody extends React.Component {
     render() {
         var that = this;
         return (
-            React.createElement("tbody", null, 
-            this.props.data.items.map(function(item, i) {
-                return React.createElement(TableRow, 
-                                            {
-                                                key: i,
-                                                item: item,
-                                                columns: that.props.data.columns
-                                            })
-            })
+            React.createElement("tbody", null,
+                this.props.data.items.map(function(item, i) {
+                    return React.createElement(TableRow, {
+                        key: i,
+                        item: item,
+                        columns: that.props.data.columns
+                    })
+                })
             )
         );
     }
@@ -33,15 +32,14 @@ class TableRow extends React.Component {
     render() {
         var that = this;
         return (
-            React.createElement("tr", null, 
-            this.props.columns.map(function (column, i) {
-                return React.createElement(TableCell, 
-                                            {
-                                                key: i,
-                                                column: column,
-                                                value: that.props.item[column.key]
-                                            })
-            })
+            React.createElement("tr", null,
+                this.props.columns.map(function(column, i) {
+                    return React.createElement(TableCell, {
+                        key: i,
+                        column: column,
+                        value: that.props.item[column.key]
+                    })
+                })
             )
         );
     }
@@ -56,8 +54,8 @@ class TableCell extends React.Component {
     render() {
         const td_textAlign = (this.props.column.key === 'No') ? 'center' : 'left';
         return (
-            React.createElement("td", {className: "", style:{textAlign:td_textAlign}},
-                React.createElement("pre",null, this.props.value)
+            React.createElement("td", { className: "", style: { textAlign: td_textAlign } },
+                React.createElement("pre", null, this.props.value)
             )
         );
     }

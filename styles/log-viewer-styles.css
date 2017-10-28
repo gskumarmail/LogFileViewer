@@ -1,67 +1,94 @@
 body {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
+
 table {
-  table-layout:fixed;
+    table-layout: fixed;
 }
+
 table th {
-  background-color: rgb(217, 83, 79);
-  color: #fff;
+    background-color: rgb(217, 83, 79);
+    color: #fff;
 }
+
 table th a {
-   color: #fff;
+    color: #fff;
 }
+
 table th a:hover {
-   color: #CCC;
-   text-decoration: none
+    color: #CCC;
+    text-decoration: none
 }
+
 pre {
-   white-space: pre-line;
-   border: none;
+    white-space: pre-line;
+    border: none;
+    padding: 4px;
 }
-.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
-  border-bottom-width: 0px;
+
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border-bottom-width: 0px;
 }
-.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
     padding: 12px;
     font-size: 16px;
 }
+
 .table>tfoot>tr>td a:active {
-  color: rgb(217, 83, 79);
+    color: rgb(217, 83, 79);
 }
 
-.table>tfoot>tr>td a{
-  color: rgb(38, 161, 174);
-  font-weight: bold;
+.table>tfoot>tr>td a {
+    color: rgb(38, 161, 174);
+    font-weight: bold;
 }
+
 #app.main-container {
-   padding-bottom: 30px;
+    padding-bottom: 30px;
 }
-#app>div.container{
-  box-shadow: 0px 10px 40px #888888;
-  border-radius: 26px;
-  padding-top: 20px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-    
+
+#app>div.container {
+    box-shadow: 0px 10px 40px #888888;
+    border-radius: 26px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
+
 .loader {
-  top: 50%;
-  left: 50%;
-  position: fixed;
-  border: 16px solid #e5e5e5;
-  border-radius: 50%;
-  border-top: 16px solid #d9534f;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    border: 16px solid #e5e5e5;
+    border-radius: 50%;
+    border-top: 16px solid #d9534f;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
 }
+
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

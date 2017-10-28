@@ -5,17 +5,16 @@
  */
 
 class TableHeader extends React.Component {
-    render () {
+    render() {
         return (
-            React.createElement("thead", null, 
-                React.createElement("tr", null, 
-                this.props.data.columns.map(function (column, i) {
-                    return React.createElement(TableHeaderCell, 
-                                                {
-                                                    key: i,
-                                                    column: column
-                                                })
-                })
+            React.createElement("thead", null,
+                React.createElement("tr", null,
+                    this.props.data.columns.map(function(column, i) {
+                        return React.createElement(TableHeaderCell, {
+                            key: i,
+                            column: column
+                        })
+                    })
                 )
             )
         );
@@ -33,12 +32,12 @@ class TableHeaderCell extends React.Component {
         const th_column_width = (this.props.column.key === 'No') ? '10%' : '90%';
         const th_textAlign = (this.props.column.key === 'No') ? 'center' : 'left';
         return (
-            React.createElement("th", 
-                                {
-                                    className: "", 
-                                    style:{textAlign:th_textAlign, width:th_column_width}},
-                                    this.props.column.label
-                                )
+            React.createElement("th", {
+                    className: "",
+                    style: { textAlign: th_textAlign, width: th_column_width }
+                },
+                this.props.column.label
+            )
         );
     }
 }

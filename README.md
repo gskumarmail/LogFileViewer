@@ -8,12 +8,16 @@ Log File Viewer
 2. Place your LogFileViewer project folder under your document root (Eg. xampp/htdocs/LogFileViewer)
 3. Start server
 4. Run URL (Eg.http://localhost/LogFileViewer) in browser to explore the application
-5. To run demo, provide valid log file name (log.txt or serverlog.txt)/ URL (http://www.conversationmarketing.com/log-files-sample/samplelog.txt) input
+5. To run demo, provide valid log file name (log.txt or serverlog.txt) input
 
-### Prerequisites
+## Prerequisites
 
 1. XAMPP Server
 2. Browser
+
+## Demo
+
+[Log File Viewer](http://fileviewer.epizy.com/)
 
 ## Running the tests
 
